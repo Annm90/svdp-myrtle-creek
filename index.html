@@ -1,55 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>St. Vincent de Paul Myrtle Creek</title>
-<style>
-body{font-family:Arial,sans-serif;margin:0;line-height:1.6}
-header{background:#0b5ea8;color:white;padding:20px}
-nav a{color:white;margin-right:15px;text-decoration:none}
-.hero{padding:40px}
-.btn{background:#0b5ea8;color:white;padding:10px 16px;text-decoration:none;border-radius:4px}
-section{padding:20px}
-footer{background:#eee;padding:20px}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>St. Vincent de Paul - Myrtle Creek</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
-<header>
-<h1>St. Vincent de Paul - Myrtle Creek</h1>
-<nav>
-<a href="#about">About</a>
-<a href="#store">Treasures & Unique Finds</a>
-<a href="#volunteer">Volunteer</a>
-<a href="#contact">Contact</a>
-<a href="#donate">Donate Today</a>
-</nav>
+
+<header class="header">
+  <div class="logo-area">
+    <img src="flag.png" alt="Flag" class="flag"/>
+    <div>
+      <h1>St. Vincent de Paul</h1>
+      <p>Myrtle Creek, Oregon</p>
+    </div>
+  </div>
 </header>
-<div class="hero">
-<h2>Helping Our Community With Dignity and Compassion</h2>
-<p>Support local assistance programs through donations, volunteering, and online purchases.</p>
-<a class="btn" href="#donate">Donate Today</a>
-</div>
-<section id="store">
-<h2>Treasures & Unique Finds</h2>
-<p>Rare, collectible, vintage, jewelry, toys, artwork, furniture, and unique donated items.</p>
+
+<!-- NAVBAR WITH DROPDOWN -->
+<nav class="navbar">
+  <a href="#home">Home</a>
+
+  <div class="dropdown">
+    <button class="dropbtn">Services ▾</button>
+    <div class="dropdown-content">
+      <a href="#foodbank">Food Bank</a>
+      <a href="#clothing">Clothing Vouchers</a>
+      <a href="#furniture">Furniture Assistance</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Programs ▾</button>
+    <div class="dropdown-content">
+      <a href="#donate">Donate</a>
+      <a href="#shop">Shop</a>
+      <a href="#christmas">Christmas Angels</a>
+    </div>
+  </div>
+
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <h2>Serving Our Community With Compassion</h2>
+  <p>Food assistance, clothing support, and emergency help for families in need.</p>
 </section>
-<section id="about">
-<h2>About Us</h2>
-<p>Serving Myrtle Creek and surrounding communities.</p>
+
+<!-- FOOD BANK -->
+<section id="foodbank" class="section">
+  <h2>Food Bank</h2>
+  <p>Open Monday & Wednesday — 9:00 AM to 1:00 PM</p>
 </section>
-<section id="volunteer">
-<h2>Volunteer</h2>
-<p>Join our mission and help local families.</p>
+
+<!-- SERVICES -->
+<section id="clothing" class="section">
+  <h2>Clothing Vouchers</h2>
+  <p>Available every 6 months for eligible families.</p>
 </section>
-<section id="donate">
-<h2>Donate Today</h2>
-<p>Add your donation processor link here.</p>
+
+<section id="furniture" class="section">
+  <h2>Emergency Furniture Assistance</h2>
+  <p>Helping families rebuild with essential household items.</p>
 </section>
-<section id="contact">
-<h2>Contact</h2>
-<p>116 N Main St, Myrtle Creek, Oregon</p>
+
+<!-- SHOP -->
+<section id="shop" class="section">
+  <h2>Community Shop</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Support Item</h3>
+      <p>Funds food bank operations.</p>
+      <button>Buy</button>
+    </div>
+
+    <div class="card">
+      <h3>Community Bundle</h3>
+      <p>Supports clothing and housing aid.</p>
+      <button>Buy</button>
+    </div>
+  </div>
 </section>
-<footer>© St. Vincent de Paul Myrtle Creek</footer>
+
+<!-- DONATE -->
+<section id="donate" class="section donate">
+  <h2>Donate</h2>
+  <p>Your support helps local families in need.</p>
+  <button onclick="alert('Donation system coming soon')">Donate Now</button>
+</section>
+
+<!-- CHRISTMAS -->
+<section id="christmas" class="section">
+  <h2>Christmas Angels Program</h2>
+  <p>Helping children receive gifts during the holiday season through community donations.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <p>116 N Main St, Myrtle Creek, Oregon</p>
+</section>
+
+<footer>
+  <p>© St. Vincent de Paul Myrtle Creek</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
