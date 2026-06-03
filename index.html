@@ -39,7 +39,7 @@
         <a href="#contact" class="nav-link">Contact</a>
       </div>
 
-      <button onclick="openCart()" class="flex items-center gap-2 bg-red-700 text-white px-5 py-2 rounded-full hover:bg-red-800">
+      <button onclick="openCart()" class="flex items-center gap-2 bg-red-700 text-white px-5 py-2 rounded-full hover:bg-red-800 transition">
         <i class="fa-solid fa-cart-shopping"></i>
         <span id="cart-count" class="font-bold">0</span>
       </button>
@@ -68,11 +68,12 @@
           <h3 class="text-2xl font-bold mb-4">50% Off Days</h3>
           <p class="text-lg mb-6">Every <strong>1st and 4th Friday & Saturday</strong> of the month</p>
           <p class="text-3xl font-bold text-red-700">50% OFF EVERYTHING</p>
+          <p class="mt-4 text-gray-600">In-store only • No exceptions</p>
         </div>
         <div class="bg-white p-10 rounded-3xl shadow">
           <h3 class="text-2xl font-bold mb-4">Town-Wide Yard Sale</h3>
           <p class="text-3xl font-bold mb-2">June 20th, 2026</p>
-          <p class="text-lg">Join the Myrtle Creek town-wide yard sale!</p>
+          <p class="text-lg">Join us for the big Myrtle Creek town-wide yard sale!</p>
         </div>
       </div>
     </div>
@@ -81,9 +82,9 @@
   <!-- Shop -->
   <section id="shop" class="py-20 bg-gray-100">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold mb-8">Thrift Shop</h2>
+      <h2 class="text-4xl font-bold mb-8 text-center">Thrift Shop</h2>
       
-      <div class="flex flex-wrap gap-3 mb-10">
+      <div class="flex flex-wrap gap-3 mb-10 justify-center">
         <button onclick="filterCategory('all')" class="category-btn active px-6 py-3 bg-white rounded-full shadow">All Items</button>
         <button onclick="filterCategory('rare')" class="category-btn px-6 py-3 bg-white rounded-full shadow">Rare Finds</button>
         <button onclick="filterCategory('antiques')" class="category-btn px-6 py-3 bg-white rounded-full shadow">Antiques</button>
@@ -95,8 +96,34 @@
     </div>
   </section>
 
+  <!-- Policies -->
+  <section id="policies" class="py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Store Policies</h2>
+      <div class="space-y-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-3">No Returns or Exchanges</h3>
+          <p class="text-lg">All sales are final. Please inspect items carefully before purchasing.</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Shipping & Pickup</h3>
+          <p class="text-lg"><strong>Shipping:</strong> Available upon request. Cost calculated at checkout.</p>
+          <p class="text-lg mt-3"><strong>Local Pickup:</strong> Free on Tuesdays (by appointment only).</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Donations</h3>
+          <p class="text-lg"><strong>Donation Days:</strong> Thursday & Saturday, 11:00 AM – 4:00 PM</p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-3">Privacy</h3>
+          <p class="text-lg">We respect your privacy and never share your personal information.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-white">
+  <section id="contact" class="py-20 bg-gray-100">
     <div class="max-w-2xl mx-auto px-6">
       <h2 class="text-4xl font-bold text-center mb-12">Get In Touch</h2>
       <form id="contact-form" class="space-y-6">
@@ -118,19 +145,47 @@
     </div>
   </section>
 
-  <!-- Policies + Footer (same as yours, just keeping it clean) -->
-  <!-- ... (I kept your policies and footer unchanged) ... -->
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-2xl font-bold mb-4">St. Vincent de Paul</h3>
+        <p>116 N Main Street<br>Myrtle Creek, OR 97457</p>
+        <p class="mt-4">(541) 863-5489</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Hours</h4>
+        <p>Store: Mon–Fri 9 AM – 5 PM</p>
+        <p>Donations: Thu & Sat 11 AM – 4 PM</p>
+        <p>Pickups: Tuesdays (appt)</p>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Quick Links</h4>
+        <a href="#shop" class="block hover:text-red-400 py-1">Shop</a>
+        <a href="#events" class="block hover:text-red-400 py-1">Events</a>
+        <a href="#policies" class="block hover:text-red-400 py-1">Policies</a>
+        <a href="#contact" class="block hover:text-red-400 py-1">Contact</a>
+      </div>
+      <div>
+        <h4 class="font-bold mb-4">Follow Us</h4>
+        <a href="https://www.facebook.com/p/St-Vincent-de-Paul-South-Umpqua-100082110007894/" target="_blank" class="block hover:text-red-400 py-1">Facebook</a>
+      </div>
+    </div>
+    <div class="text-center mt-12 text-sm text-gray-400">
+      © 2026 St. Vincent de Paul Society of Myrtle Creek, Oregon
+    </div>
+  </footer>
 
   <!-- Cart Modal -->
   <div id="cart-modal" class="hidden fixed inset-0 bg-black/70 flex items-center justify-center z-[100]">
     <div class="bg-white rounded-3xl max-w-lg w-full mx-4 p-8">
       <h3 class="text-3xl font-bold mb-6">Your Cart</h3>
       <div id="cart-items" class="space-y-6 max-h-96 overflow-auto"></div>
-      <div class="mt-8 flex justify-between text-xl font-semibold">
+      <div class="mt-8 flex justify-between text-xl font-semibold border-t pt-6">
         <span>Total</span>
         <span id="cart-total">$0.00</span>
       </div>
-      <button onclick="checkout()" class="w-full mt-8 bg-green-600 text-white py-4 rounded-2xl text-lg">Proceed to Checkout</button>
+      <button onclick="checkout()" class="w-full mt-8 bg-green-600 text-white py-4 rounded-2xl text-lg font-semibold">Proceed to Checkout</button>
       <button onclick="closeCart()" class="w-full mt-3 text-gray-600 hover:underline">Close</button>
     </div>
   </div>
@@ -158,10 +213,7 @@
           <div class="p-6">
             <h4 class="font-semibold text-lg">${p.name}</h4>
             <p class="text-3xl font-bold text-red-700 mt-2">\[ {p.price}</p>
-            <button onclick="addToCart(${p.id})" 
-                    class="mt-6 w-full bg-red-700 text-white py-3 rounded-2xl hover:bg-red-800 transition">
-              Add to Cart
-            </button>
+            <button onclick="addToCart(${p.id})" class="mt-6 w-full bg-red-700 text-white py-3 rounded-2xl hover:bg-red-800 transition">Add to Cart</button>
           </div>
         </div>
       `).join('');
@@ -192,7 +244,7 @@
       const itemsDiv = document.getElementById('cart-items');
       let total = 0;
 
-      itemsDiv.innerHTML = cart.map((item, index) => {
+      itemsDiv.innerHTML = cart.map(item => {
         total += item.price;
         return `
           <div class="flex justify-between items-center border-b pb-4">
@@ -211,13 +263,12 @@
 
     function checkout() {
       if (cart.length === 0) return;
-      alert("Thank you for your purchase! We'll contact you soon to arrange shipping or Tuesday pickup.");
+      alert("Thank you! We'll contact you to arrange shipping or Tuesday pickup.");
       cart = [];
       document.getElementById('cart-count').textContent = '0';
       closeCart();
     }
 
-    // Contact Form
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
       document.getElementById('form-success').classList.remove('hidden');
